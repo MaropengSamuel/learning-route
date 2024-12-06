@@ -4,6 +4,8 @@ import "./App.css";
 import Dashobord from "./pages/DashBord";
 import Goals from "./pages/Goals";
 import Spending from "./pages/Spending";
+import Total from "./pages/Total";
+
 import { Routes, Route } from "react-router-dom";
 import { Link } from "react-router-dom";
 
@@ -20,18 +22,25 @@ function App() {
           </div>
           <div className="mb-4">
           <Link to="/goals" className="bg-cyan-500 block text-white p-1 rounded w-full" >Goal</Link>
+        
           </div>
           <div className="mb-4">
           <Link to="/spending" className="bg-cyan-500 block text-white p-1 rounded w-full" >Spending</Link>
           </div>
+          <div className="mb-4">
+          <Link to="/total" className="bg-cyan-500 block text-white p-1 rounded w-full" >Total</Link>
+          </div>
         </div>
-
-      <Routes>
+<div className="p-2">
+  
+<Routes>
         <Route path="/" element={<Dashobord/>}/>
-        <Route path="/goals" element={<Goals/>}/>
+        <Route path="/goals" element={<Goals className="p-2"/>}/>
         <Route path="/spending" element={<Spending/>}/>
+        <Route path="total" element ={<Total/>}/>
       </Routes>
 
+</div>
 
           
       </div>
